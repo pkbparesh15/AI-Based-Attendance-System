@@ -1,0 +1,219 @@
+/* Variables */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary: #007bff;
+    --bs-secondary: #6c757d;
+    --bs-success: #28a745;
+    --bs-info: #17a2b8;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+  }
+  
+  /* Reset and General Styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  /* Links */
+  a {
+    color: var(--bs-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--bs-primary);
+    text-decoration: underline;
+  }
+  
+  /* Navigation Bar */
+.navbar {
+    background-color: var(--bs-dark);
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    color: var(--bs-light); /* Adjust the brand name color */
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: var(--bs-light);
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: var(--bs-light);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--bs-primary);
+  }
+  
+  /* Header CSS */
+
+  header {
+    background-image: url('static/bg.jpg'); /* Add the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: var(--bs-light);
+    text-align: center;
+    padding: 10rem 25rem;
+  }
+  
+  .header-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px; /* Add padding for better responsiveness */
+  }
+  
+  .display-5 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--bs-light);
+    color: var(--bs-primary);    
+  }
+  
+  
+/* Features section styles */
+#features {
+    background-color: #fff; /* Set background color to white */
+    padding: 50px 50px; /* Adjust padding as needed */
+  }
+  
+  .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 100%;
+    padding: 20px;
+    border: 2px solid #ccc; /* Set border color as needed */
+    border-radius: 10px; /* Set border radius as needed */
+    margin-bottom: 20px;
+    text-align: center; /* Center text */
+  }
+  
+  .feature i {
+    font-size: 3rem; /* Adjust icon size as needed */
+    margin-bottom: 15px;
+    color: #fff; /* Set icon color as needed */
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem; /* Adjust title font size as needed */
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem; /* Adjust paragraph font size as needed */
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .feature {
+      width: 100%; /* Make features take full width on smaller screens */
+    }
+  }
+  
+  /* Align features in a horizontal line on all screen sizes */
+  @media (min-width: 576px) {
+    .row.gx-5 {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  /* Adjust spacing between features */
+  @media (min-width: 768px) {
+    .row.gx-5 {
+      gap: 20px;
+    }
+  }
+  
+  
+  
+  /* Footer */
+footer {
+    padding: 2rem 0;
+    background-color: #343a40; /* Dark background color */
+  }
+  
+  footer p {
+    margin: 0;
+    color: #fff; /* White text color */
+    font-size: 14px;
+  }
+  
+  /* Copyright text */
+  footer p::before {
+    content: "\2022"; /* Unicode character for bullet point */
+    margin-right: 5px;
+  }
+  
+  footer a {
+    color: #ffc107; /* Yellow link color */
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  

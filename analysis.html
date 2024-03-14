@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights</title>
+  <style>
+    #container {
+      display: flex;
+    }
+
+    #imageContainer {
+      max-width: 700px;
+      margin: 20px;
+    }
+
+    #buttonsContainer {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 91px;
+      gap: 13px;
+      margin: 37px 28px;
+    }
+
+    button {
+      height: 221px;
+      background-color: #007BFF;
+      opacity: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="buttonsContainer">
+      <button onclick="showSlides(1)" class="active"></button>
+      <button onclick="showSlides(3)" class="active"></button>
+      <button onclick="showSlides(4)" class="active"></button>
+    </div>
+
+    <div id="imageContainer">
+      <img id="slide1" src="images/Slide1.JPG" alt="Slide 1">
+      <img id="slide2" src="images/Slide2.JPG" alt="Slide 2">
+      <img id="slide3" src="images/Slide3.JPG" alt="Slide 3">
+      <img id="slide4" src="images/Slide4.JPG" alt="Slide 4">
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+
+    function showSlides(slideNumber) {
+      // Hide all slides
+      const slides = document.querySelectorAll('img');
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+
+      // Show the selected slides based on the button clicked
+      if (slideNumber === 1) {
+        document.getElementById('slide1').style.display = 'block';
+        document.getElementById('slide2').style.display = 'block';
+      } else {
+        // Show only the selected slide
+        const selectedSlide = document.getElementById(`slide${slideNumber}`);
+        if (selectedSlide) {
+          selectedSlide.style.display = 'block';
+          currentSlide = slideNumber;
+        }
+      }
+    }
+
+    // Initial display when the page loads
+    showSlides(1);
+  </script>
+
+</body>
+</html>
