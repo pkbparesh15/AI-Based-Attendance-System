@@ -51,7 +51,7 @@ def is_underexposed(image):
     intensity = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY).mean()
     return intensity < exposure_threshold_low
 
-@app.route('/attendance', method=['GET'])
+@app.route('/attendance')
 def index():
     return render_template('index.html')
 
